@@ -9,6 +9,7 @@ db/
 dbd/
 lib/
 include/
+envPaths
 *.o
 *.exe
 *.linux-x86_64
