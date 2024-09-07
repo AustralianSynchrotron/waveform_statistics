@@ -1,2 +1,11 @@
 # waveform_statistics
-Waveform_Statistics calculation sub-routine, for use with the EPICS aSubRecord.This module allows the calculation of statistics of values extracted from multi-valued records such as a waveform, subArray or concat record.
+
+Waveform_Statistics calculation sub-routine, for use with the EPICS aSubRecord.
+This module allows the calculation of statistics of values extracted from
+multi-valued records such as a waveform, subArray or concat record.
+
+# aSub record field usage
+
+Please refer tocomments in
+Waveform_StatisticsSup/Waveform_Statistics_Subroutines.c
+

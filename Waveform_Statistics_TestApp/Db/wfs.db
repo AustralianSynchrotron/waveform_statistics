@@ -1,0 +1,130 @@
+# $File: //ASP/tec/epics/wfs/trunk/Waveform_Statistics_TestApp/Db/wfs.db $
+# $Revision: #4 $
+# $DateTime: 2020/03/02 18:01:05 $
+# Last checked in by: $Author: starritt $
+#
+
+record (waveform, "INPUT:REAL") {
+    field (SCAN, "Passive")
+    field (NELM, "$(NELM)")
+    field (FTVL, "DOUBLE")
+    field (FLNK, "WFS:PROCESS")
+}
+
+record (waveform, "INPUT:MASK") {
+    field (SCAN, "Passive")
+    field (NELM, "$(NELM)")
+    field (FTVL, "LONG")
+    field (FLNK, "WFS:PROCESS")
+}
+
+record (longout, "INPUT:SIZE") {
+    field (SCAN, "Passive")
+    field (VAL,  "$(NELM)")
+    field (DRVL, "0")
+    field (DRVH, "$(NELM)")
+    field (FLNK, "WFS:PROCESS")
+}
+
+record (longout, "INPUT:OFFSET") {
+    field (SCAN, "Passive")
+    field (VAL,  "0")
+    field (DRVL, "0")
+    field (DRVH, "$(NELM)")
+    field (FLNK, "WFS:PROCESS")
+}
+
+record (aSub, "WFS:PROCESS") {
+    field (SCAN, "Passive")
+    field (INAM, "Waveform_Statistics_Init")
+    field (SNAM, "Waveform_Statistics_Process")
+
+    field (INPA, "INPUT:REAL")
+    field (FTA,  "DOUBLE")
+    field (NOA,  "$(NELM)")
+
+    field (INPB, "INPUT:SIZE")
+    field (FTB,  "LONG")
+    field (NOB,  "1")
+
+    # Offset
+    #
+    field (INPC, "0")
+    field (FTC,  "LONG")
+    field (NOC,  "1")
+
+    field (INPE, "INPUT:MASK")
+    field (FTE,  "LONG")
+    field (NOE,  "$(NELM)")
+
+
+    # Output (also stored in VALA/VALB)
+    #
+    field (OUTA, "OUTPUT:MEAN PP")
+    field (FTVA, "DOUBLE")
+    field (NOVA, "1")
+
+    field (OUTB, "OUTPUT:MIN PP")
+    field (FTVB, "DOUBLE")
+    field (NOVB, "1")
+
+    field (OUTC, "OUTPUT:MAX PP")
+    field (FTVC, "DOUBLE")
+    field (NOVC, "1")
+
+    field (OUTD, "OUTPUT:STD_DEV PP")
+    field (FTVD, "DOUBLE")
+    field (NOVD, "1")
+
+    field (OUTE, "OUTPUT:TOTAL PP")
+    field (FTVE, "DOUBLE")
+    field (NOVE, "1")
+
+    field (OUTF, "OUTPUT:MEDIAN PP")
+    field (FTVF, "DOUBLE")
+    field (NOVF, "1")
+
+    field (OUTI, "OUTPUT:MAX_ABS PP")
+    field (FTVI, "DOUBLE")
+    field (NOVI, "1")
+
+    field (OUTJ, "OUTPUT:RMS PP")
+    field (FTVJ, "DOUBLE")
+    field (NOVJ, "1")
+}
+
+#
+#
+record (ao, "OUTPUT:MEAN") {
+    field (SCAN, "Passive")
+}
+
+record (ao, "OUTPUT:MIN") {
+    field (SCAN, "Passive")
+}
+
+record (ao, "OUTPUT:MAX") {
+    field (SCAN, "Passive")
+}
+
+record (ao, "OUTPUT:MAX_ABS") {
+    field (SCAN, "Passive")
+}
+
+record (ao, "OUTPUT:STD_DEV") {
+    field (SCAN, "Passive")
+}
+
+record (ao, "OUTPUT:TOTAL") {
+    field (SCAN, "Passive")
+}
+
+record (ao, "OUTPUT:MEDIAN") {
+    field (SCAN, "Passive")
+}
+
+record (ao, "OUTPUT:RMS") {
+    field (SCAN, "Passive")
+}
+
+# end

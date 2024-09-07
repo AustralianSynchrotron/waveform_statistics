@@ -1,0 +1,10 @@
+# $File: //ASP/tec/epics/wfs/trunk/Waveform_StatisticsSup/Waveform_Statistics_Subroutines.dbd $
+# $Revision: #1 $
+# $DateTime: 2016/03/15 09:37:08 $
+# Last checked in by: $Author: pozara $
+#
+
+function (Waveform_Statistics_Init)
+function (Waveform_Statistics_Process)
+
+# end
