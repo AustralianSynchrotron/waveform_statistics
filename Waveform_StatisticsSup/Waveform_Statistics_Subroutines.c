@@ -34,17 +34,17 @@
  * OUTI: epicsFloat64 - maximum absolute value
  * OUTJ: epicsFloat64 - root mean square (RMS) value
  * OUTK: epicsFloat64 - standard deviation (based on population variance, i.e. / N)
- * OUTL: epicsInt32   - acutal number of elemets used to calculate the statistics
+ * OUTL: epicsInt32   - acutal number of elements used to calculate the statistics
  *                      taking into account INPB, INPC and INPE.
  *
  * Note: G/H assume equi-spaced samples.
  *
- * Others outputs can be added as and when required.
+ * Others outputs may be added as and when required.
  *
  *
  * Source code formatting:  indent -kr -pcs -i3 -cli3 -nbbo -nut
  *
- * Copyright (c) 2010-2023  Australian Synchrotron
+ * Copyright (c) 2010-2024  Australian Synchrotron
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
